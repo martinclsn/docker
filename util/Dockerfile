@@ -20,7 +20,7 @@ RUN echo "GatewayPorts yes" >> /etc/ssh/sshd_config
 RUN echo 'root:chpasswd' | chpasswd
 
 EXPOSE 22
-ENTRYPOINT ["/usr/bin/supervisord"]
+ENTRYPOINT ["/usr/bin/supervisord","-c","/etc/supervisord.conf"]
 
 
 
